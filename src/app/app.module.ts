@@ -15,7 +15,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzIconModule} from "ng-zorro-antd/icon";
-import { SidebarComponent } from './sidebar/sidebar.component';
+
+import {NzGridModule} from "ng-zorro-antd/grid";
+import { LeftcontentComponent } from './leftcontent/leftcontent.component';
+import { ContentComponent } from './content/content.component';
+import { RightcontentComponent } from './rightcontent/rightcontent.component';
 
 
 registerLocaleData(en);
@@ -24,20 +28,23 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     DisplayComponent,
-    SidebarComponent,
+    LeftcontentComponent,
+    ContentComponent,
+    RightcontentComponent,
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NzLayoutModule,
-    NzMenuModule,
-    NzIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NzLayoutModule,
+        NzMenuModule,
+        NzIconModule,
+        NzGridModule
+    ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
